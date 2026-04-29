@@ -30,7 +30,7 @@ function App() {
       const data = await res.json();
 
       setChat([...updatedChat, { sender: "ai", text: data.reply }]);
-    } catch (err) {
+    } catch {
       setChat([
         ...updatedChat,
         { sender: "ai", text: "Error connecting to server." },
@@ -42,7 +42,6 @@ function App() {
 
   return (
     <div className="h-screen flex flex-col bg-gray-900 text-white">
-      
       {/* Header */}
       <div className="p-4 text-center text-xl font-bold border-b border-gray-700">
         🤖 AI Chatbot
@@ -54,18 +53,14 @@ function App() {
           <div
             key={i}
             className={`p-3 rounded-lg max-w-[70%] ${
-              msg.sender === "user"
-                ? "bg-blue-500 ml-auto"
-                : "bg-gray-700"
+              msg.sender === "user" ? "bg-blue-500 ml-auto" : "bg-gray-700"
             }`}
           >
             {msg.text}
           </div>
         ))}
 
-        {loading && (
-          <div className="text-gray-400">AI is typing...</div>
-        )}
+        {loading && <div className="text-gray-400">AI is typing...</div>}
 
         <div ref={bottomRef}></div>
       </div>
