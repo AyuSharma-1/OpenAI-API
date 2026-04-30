@@ -30,13 +30,13 @@ openAI-test/
 
 ## 🛠️ Technology Stack
 
-| Layer                 | Technology            |
-| --------------------- | --------------------- |
-| **Backend**           | Flask, Python 3.x     |
-| **AI Model**          | OpenAI GPT-4o-mini    |
-| **Frontend**          | React 19, Vite 8      |
-| **Styling**           | Tailwind CSS 4        |
-| **API Communication** | REST (JSON over HTTP) |
+| Layer                 | Technology               |
+| --------------------- | ------------------------ |
+| **Backend**           | Flask, Python 3.x        |
+| **AI Model**          | OpenRouter (Gemma 4 31B) |
+| **Frontend**          | React 19, Vite 8         |
+| **Styling**           | Tailwind CSS 4           |
+| **API Communication** | REST (JSON over HTTP)    |
 
 ---
 
@@ -259,3 +259,7 @@ MIT License — Feel free to use this project for learning or commercial purpose
 - [Flask](https://flask.palletsprojects.com) — Lightweight WSGI web application framework
 - [React](https://react.dev) — UI component library
 - [Tailwind CSS](https://tailwindcss.com) — Utility-first CSS framework
+
+## Project link
+
+https://roadmap.sh/projects/openai-api-python

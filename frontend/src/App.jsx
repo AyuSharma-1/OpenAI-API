@@ -13,7 +13,8 @@ function App() {
   const sendMessage = async () => {
     if (!message.trim()) return;
 
-    const updatedChat = [...chat, { sender: "user", text: message }];
+    const currentMessage = message; // ✅ capture before clearing
+    const updatedChat = [...chat, { sender: "user", text: currentMessage }];
     setChat(updatedChat);
     setMessage("");
     setLoading(true);
@@ -24,7 +25,7 @@ function App() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ message }),
+        body: JSON.stringify({ message: currentMessage }), // ✅ send saved value
       });
 
       const data = await res.json();
